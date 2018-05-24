@@ -2,6 +2,10 @@
 
 ssh -o StrictHostKeyChecking=no holtat@scompile.rc.int.colorado.edu << "EOF"
 
+echo "HERE"
+echo $SREG_ESCAPED
+echo "HERE2"
+
 echo $SREG_ESCAPED > /home/holtat/sreg_tmp
 
 # Sregistry environment
