@@ -1,4 +1,5 @@
 def call(def job) {
+
     node {
         git url: 'https://github.com/ResearchComputing/mfix_singularity'
 
@@ -32,7 +33,7 @@ def call(def job) {
                     sshagent(credentials: ['holtat-scompile']) {
                         //sh 'ssh -o StrictHostKeyChecking=no -l holtat scompile.rc.int.colorado.edu "echo $SREG_ESCAPED > /home/holtat/sreg_tmp"'
                         //sh(libraryResource('mfix/sreg_summit.sh'))
-                        sh(libraryResource(${job}))
+                        sh(libraryResource("${job}"))
                         sh "echo ${job}"
                     }
                 }
