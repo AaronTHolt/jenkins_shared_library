@@ -30,4 +30,6 @@ fi
 sregistry pull holtat/mfix_full
 deactivate
 
+shred /home/holtat/sreg_tmp
+
 EOF
