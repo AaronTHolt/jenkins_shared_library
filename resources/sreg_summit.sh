@@ -1,3 +1,6 @@
+#!/bin/bash
+
+ssh -o StrictHostKeyChecking=no holtat@scompile.rc.int.colorado.edu << "EOF"
 
 echo $SREG_ESCAPED > /home/holtat/sreg_tmp
 
@@ -28,3 +31,5 @@ fi
 
 sregistry pull holtat/mfix_full
 deactivate
+
+EOF
